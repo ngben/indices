@@ -162,7 +162,7 @@ def main(args):
     index = utils_fileio.fix_output_metadata(
         index, args.index_name, ds.attrs, infile_log, 'xclim'
     )
-    index.to_netcdf(args.output_file,encoding={args.index_name:{'zlib':True, 'complevel':1, 'shuffle':True}})
+    index.to_netcdf(args.output_file,encoding={args.index_name:{'zlib':True, 'complevel':1, 'shuffle':True, 'dtype': 'float32'}})
 
 
 if __name__ == '__main__':
